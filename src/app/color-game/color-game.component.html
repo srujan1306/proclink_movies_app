@@ -1,0 +1,19 @@
+<!-- <input type="text" [(ngModel)]="color" style="{{ 'background:' + color }}" /> -->
+
+<!-- ngStyle, style -->
+<!-- <input type="text" [(ngModel)]="color" [ngStyle]="{ background: color }" /> -->
+
+<app-attr-directive />
+
+<input type="text" [(ngModel)]="color" [style.background]="color" />
+<button (click)="addColor()">Add Color</button>
+
+<!-- 
+<p>{{ color }}</p>
+<p>{{ color }}</p>
+<p>{{ color }}</p> -->
+
+@for (clr of colorList; track $index) {
+<!-- ColorBox -->
+<app-color-box [clr]="clr" />
+}
