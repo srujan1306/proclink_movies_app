@@ -6,11 +6,16 @@ import { AddMovieComponent } from './add-movie/add-movie.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { authGuard } from './auth.guard';
 import { EditMovieComponent } from './edit-movie/edit-movie.component';
+import { LoginpageComponent } from './loginpage/loginpage.component';
 
 export const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
+  },
+  {
+    path: 'loginpage',
+    component: LoginpageComponent,
   },
   {
     path: 'color-game',
