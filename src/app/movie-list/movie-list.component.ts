@@ -48,7 +48,7 @@ export class MovieListComponent {
 
   editMovieP(movie: IMovie) {
     // /movies/edit/99
-    this.router.navigate(['movies', 'edit', movie.id]);
+    this.router.navigate(['movies', 'edit', movie.movieId]);
     // this.movieService.editMovie(movie).then(() => this.loadMovies());
   }
 }

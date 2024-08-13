@@ -36,9 +36,9 @@ export class MovieDetailsComponent {
           this.movie.trailer
         );
       })
-      .catch(() => {
+      .catch((err) => {
         this.isLoading = false;
-        this.msg = 'Something went wrong 🥲';
+        this.msg = err || 'Something went wrong 🥲';
       });
   }
 }

@@ -1,12 +1,12 @@
 <section class="movie-list-container">
   @if(isLoading){
   <h1>Loading...</h1>
-  } @for (movie of movieList; track movie.id){
+  } @for (movie of movieList; track movie.movieId){
   <app-movie
     [movie]="movie"
     (deleteMovieEvent)="deleteMovieP($event)"
     (editMovieEvent)="editMovieP($event)"
-    [id]="movie.id"
+    [id]="movie.movieId"
   />
   }
 </section>

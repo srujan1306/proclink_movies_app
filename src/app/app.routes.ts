@@ -20,7 +20,7 @@ export const routes: Routes = [
   {
     path: 'color-game',
     component: ColorGameComponent,
-    canActivate: [authGuard],
+    // canActivate: [authGuard],
   },
   {
     path: 'films', // url

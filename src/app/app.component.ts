@@ -12,7 +12,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 export interface IMovie {
-  id: string;
+  movieId: string;
   name: string;
   poster: string;
   rating: number;

@@ -23,7 +23,7 @@ import { LoginService } from '../login.service';
   styleUrl: './loginpage.component.scss',
 })
 export class LoginpageComponent {
-  loginForm: FormGroup;
+  loginForm!: FormGroup;
   constructor(
     public loginService: LoginService,
     private router: Router,
@@ -37,6 +37,9 @@ export class LoginpageComponent {
   }
   userLogin() {
     console.log(this.loginForm.value);
+    this.loginService.login(this.loginForm.value).then((data) => {
+      localStorage.setItem('token', data.token);
+    });
   }
   get username() {
     return this.loginForm.get('username');

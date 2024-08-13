@@ -22,16 +22,7 @@ import { RouterLink } from '@angular/router';
   styleUrl: './movie.component.scss',
 })
 export class MovieComponent {
-  @Input() movie = {
-    id: '',
-    name: 'Vikram',
-    poster:
-      'https://m.media-amazon.com/images/M/MV5BMmJhYTYxMGEtNjQ5NS00MWZiLWEwN2ItYjJmMWE2YTU1YWYxXkEyXkFqcGdeQXVyMTEzNzg0Mjkx._V1_.jpg',
-    rating: 8.4,
-    summary:
-      'Members of a black ops team must track and eliminate a gang of masked murderers.',
-    trailer: '',
-  };
+  @Input() movie: any;
 
   @Input() id!: string;
   @Output() deleteMovieEvent = new EventEmitter<IMovie>();
@@ -41,6 +32,13 @@ export class MovieComponent {
 
   toggleSummary() {
     this.show = !this.show;
+  }
+  showInfo() {
+    if (localStorage.getItem('token')) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
   deleteMovie() {

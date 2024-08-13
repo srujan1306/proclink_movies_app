@@ -13,6 +13,7 @@
             show ? "keyboard_arrow_up" : "keyboard_arrow_down"
           }}</mat-icon>
         </button>
+        @if((showInfo())){
 
         <button
           mat-icon-button
@@ -21,6 +22,7 @@
         >
           <mat-icon>info</mat-icon>
         </button>
+        }
       </h2>
       <p class="movie-rating">⭐ {{ movie.rating }}</p>
     </div>
